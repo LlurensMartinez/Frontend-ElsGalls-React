@@ -1,22 +1,209 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,400,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Herr+Von+Muellerhoff&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
+.clearfix {
+  overflow: auto;
+  zoom: 1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav{
+  position: fixed;
+  z-index: 100;
+}
+
+.navbar-fixed{
+  background-color:rgba(38,38,38,0.95);
+}
+
+.navbar-fixed a{
+  font-weight: 900;
+}
+
+
+/* Home */
+
+.home{
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  background-image: url(https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2018/05/02101555/comida-saludable.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  border-bottom-left-radius: 50% 5%;
+  border-bottom-right-radius: 50% 5%;
+  border: 0px solid #000000;
+}
+
+.text-home{
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  top:30vh;
+  left:20%;
+  width: 60%;
+  height: 50%;
+
+
 }
 
-.App-link {
-  color: #09d3ac;
+.text-home h2 {
+  margin-bottom: -3%;
+  font-weight: 900;
+  font-size: 80px;
+  line-height: 48%;
+  -webkit-text-stroke: 0.5px black;
+  color: #fd6934;
+}
+
+.text-home h1 {
+  font-size: 80px;
+  font-weight: 900;
+  color: whitesmoke;
+}
+
+#slogan{
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: whitesmoke;
+}
+
+#tel{
+
+  font-size: 3rem;
+  font-weight: 400;
+  color: whitesmoke;
+  margin-top: auto;
+}
+
+
+/* SECTION INFO */
+
+.sectionInfo{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  width: 100%;
+  height: 75vh;
+  background-image: url(https://codex-themes.com/thegem/sites/delicious-restaurant/wp-content/uploads/2018/12/1.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.container h2 {
+  font-family: 'Herr Von Muellerhoff', cursive;
+  font-size: 100px;
+  font-weight: 400;
+  color: #fd6934;
+  text-align: center;
+}
+
+.container h3 {
+  text-align: center;
+  font-style: normal;
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.container p {
+  font-size: 1.2rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-align: center;
+}
+
+
+/* SECTION IMAGES */
+
+.imagesContainer{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  width: 100%;
+  height: 80vh;
+  margin-top:5%;
+}
+.bx-viewport{
+  height: 500px !important;
+}
+
+.imgSlider{
+  height: auto;
+}
+
+
+/* SECTION MENU */
+
+.sectionMenu{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items:center;
+  width: 100%;
+  height: 80vh;
+  background-image: url(https://codex-themes.com/thegem/sites/delicious-restaurant/wp-content/uploads/2018/12/26.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+}
+
+.containerMenu{
+  width: 50%;
+  height: 100%;
+  padding: 5%;
+}
+
+
+
+.sectionOmeletes{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/foto4.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.containerInfoOmeltes{
+  margin-bottom: 5%;
+}
+
+.omeletesImgContainer{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}
+
+.omeleteImg{
+  width: 300px;
+  margin: 0 !important;
+}
+
+.omeleteImg img{
+  width: 99%;
+  height: 250px;
+  border-radius: 5%;
+}
+
+.row .col.m7 {
+  width: 100% !important;
+}
+
+.card-title{
+ color: black !important;
 }
