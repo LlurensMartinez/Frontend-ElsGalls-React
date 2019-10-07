@@ -6,7 +6,7 @@ const navbar = () => {
       <div className="navbar-fixed">
         <a href="#" className="brand-logo">Logo</a>
         <ul id="nav-mobile" className="right hide-on-med-and-down">
-          <li><a href="sass.html">PAGINA PRINCIPAL</a></li>
+          <li><a id="prueva" href="sass.html">PAGINA PRINCIPAL</a></li>
           <li><a href="badges.html">MENU</a></li>
           <li><a href="collapsible.html">TORTILLAS</a></li>
           <li><a href="collapsible.html">COMENTARIOS</a></li>

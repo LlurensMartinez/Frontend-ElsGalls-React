@@ -5,6 +5,7 @@ import SectionInfo from './components/sectionInfo'
 import SectionImages from './components/sectionImages'
 import Menu from './components/menu'
 import SectionOmeletes from './components/sectionOmeletes'
+import SectionComentarios from './components/sectionComentarios'
 
 import './App.css';
 
@@ -18,6 +19,7 @@ function App() {
       <SectionImages />
       <Menu />
       <SectionOmeletes />
+      <SectionComentarios />
     </>
   );
 }

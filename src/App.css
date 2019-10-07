@@ -133,8 +133,8 @@ nav{
   height: 80vh;
   margin-top:5%;
 }
-.bx-viewport{
-  height: 500px !important;
+.imageSlider{
+  height: 600px;
 }
 
 .imgSlider{
@@ -175,7 +175,7 @@ nav{
   background-image: url('/images/foto4.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: center;
 }
 
 .containerInfoOmeltes{
@@ -206,4 +206,51 @@ nav{
 
 .card-title{
  color: black !important;
+}
+
+
+
+.sectionComments{
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  height: 75vh;
+
+}
+
+.commentsContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items:center;
+  width: 100%;
+  height: 80vh;
+  margin-top:5%;
+}
+
+.comment{
+  height: 300px;
+}
+
+.comment h2 {
+  font-weight: 400;
+  color: #fd6934;
+  text-align: center;
+}
+
+.comment h3 {
+  text-align: center;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.commentsContainer h3{
+  text-align: center;
+  font-style: normal;
+  font-size: 50px;
+  font-weight: 600;
+}
+
+#prueva:hover{
+  color: red;
 }
