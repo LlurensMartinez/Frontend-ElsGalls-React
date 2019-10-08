@@ -8,6 +8,12 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+.btn, .btn-large, .btn-small{
+  background-color: #fd6934;
+}
+
+
+
 .clearfix {
   overflow: auto;
   zoom: 1;
@@ -30,12 +36,16 @@ nav{
 /* Home */
 
 .home{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   left: 0;
   top: 0;
   width: 100%;
-  height: 100vh;
+  height: 105vh;
   z-index: 1;
-  background-image: url(https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2018/05/02101555/comida-saludable.jpg);
+  background-image: url(https://images.unsplash.com/photo-1528605248644-14dd04022da1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
@@ -45,42 +55,36 @@ nav{
 }
 
 .text-home{
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  top:30vh;
-  left:20%;
-  width: 60%;
-  height: 50%;
-
-
+ background-color: rgba(38,38,38,0.50);
+ width: 100%;
+ text-align: center;
 }
 
 .text-home h2 {
-  margin-bottom: -3%;
+  margin-bottom: 2%;
   font-weight: 900;
-  font-size: 80px;
+  font-size: 6.5rem;
   line-height: 48%;
   -webkit-text-stroke: 0.5px black;
   color: #fd6934;
 }
 
 .text-home h1 {
-  font-size: 80px;
+  -webkit-text-stroke: 0.5px black;
+  font-size: 7.5rem;
   font-weight: 900;
   color: whitesmoke;
 }
 
 #slogan{
-  font-size: 1.6rem;
+  -webkit-text-stroke: 0.2px black;
+  font-size: 1.8rem;
   font-weight: 500;
   color: whitesmoke;
 }
 
 #tel{
-
+  -webkit-text-stroke: 0.1px black;
   font-size: 3rem;
   font-weight: 400;
   color: whitesmoke;
@@ -164,6 +168,7 @@ nav{
 }
 
 
+/* SECTION OMELETES */
 
 .sectionOmeletes{
   display: flex;
@@ -209,6 +214,7 @@ nav{
 }
 
 
+/* SECTION COMMENTS */
 
 .sectionComments{
   display: flex;
@@ -253,4 +259,67 @@ nav{
 
 #prueva:hover{
   color: red;
+}
+
+
+/* SECTION CONTACT */
+
+.sectionContact{
+  margin-top:7%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-image: url('/images/foto14.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+}
+
+.containerContact{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 90%;
+  margin: 5% 0 5% 0;
+  background-color: whitesmoke;
+  padding: 5%;
+  border-radius: 10px;
+}
+
+.containerEmailImgOpen{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 350px;
+  text-align: center;
+}
+
+.containerEmailImgOpen h4{
+  font-weight: 700;
+  font-size: 24px;
+  color: #262626;
+  line-height: 38px;
+  margin-bottom: 10%;
+}
+
+.containerEmailImgOpen p{
+  font-weight: 500;
+  font-size: 16px;
+  color: #262626;
+  line-height: 24px;
+  margin-bottom: 5%;
+}
+
+.containerEmailImgOpen img{
+  height: 40vh;
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* FOOTER */
+
+.page-footer{
+  background-color: #424248;
 }
