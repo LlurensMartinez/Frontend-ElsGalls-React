@@ -12,11 +12,24 @@
   background-color: #fd6934;
 }
 
+.btn:hover, .btn-large:hover, .btn-small:hover{
+  background-color: white;
+  color:  #fd6934;
+  border: 1px solid #fd6934;
+}
+
 
 
 .clearfix {
   overflow: auto;
   zoom: 1;
+}
+
+/* NavBar */
+
+#nav-mobile li a:hover{
+  color: #fd6934;
+  border: 2px solid #fd6934;;
 }
 
 nav{
@@ -58,6 +71,7 @@ nav{
  background-color: rgba(38,38,38,0.50);
  width: 100%;
  text-align: center;
+
 }
 
 .text-home h2 {
@@ -261,11 +275,21 @@ nav{
   color: red;
 }
 
+.btnCommentsContainer{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.btnCommentsContainer a{
+  margin:2%;
+}
 
 /* SECTION CONTACT */
 
 .sectionContact{
-  margin-top:7%;
+  margin-top:10%;
   width: 100%;
   display: flex;
   justify-content: center;

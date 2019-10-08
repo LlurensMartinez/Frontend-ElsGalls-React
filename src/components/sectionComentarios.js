@@ -24,7 +24,10 @@ class sectionComentarios extends Component {
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur mollitia nostrum nisi obcaecati exercitationem velit earum consequatur maxime totam tempora, ad quas distinctio fugit eveniet quae animi? Laborum, sunt magnam.</p>
               </div>
             </div>
-            <a class="waves-effect waves-light btn-large">AÑADIR COMENTARIO</a>
+            <div class="btnCommentsContainer">
+              <a class="waves-effect waves-light btn-large">AÑADIR COMENTARIO</a>
+              <a class="waves-effect waves-light btn-large">EDITAR COMENTARIO</a>
+            </div>
         </div>
       </section>
     );
