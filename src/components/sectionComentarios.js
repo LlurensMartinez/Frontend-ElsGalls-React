@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 
 class sectionComentarios extends Component {
   render() {
@@ -25,8 +26,8 @@ class sectionComentarios extends Component {
               </div>
             </div>
             <div class="btnCommentsContainer">
-              <a class="waves-effect waves-light btn-large">AÑADIR COMENTARIO</a>
-              <a class="waves-effect waves-light btn-large">EDITAR COMENTARIO</a>
+              <Link class="waves-effect waves-light btn-large" to={`/admin/comment`}>AÑADIR COMENTARIO</Link>
+              <Link class="waves-effect waves-light btn-large" to={`/admin/comment/edit`}>EDITAR COMENTARIO</Link>
             </div>
         </div>
       </section>

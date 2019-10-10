@@ -5,7 +5,8 @@ class Comment extends Component {
 
   state = {
     title: "",
-    comment: ""
+    comment: "",
+    token: localStorage.token
   };
 
   handleChange = (event) => {
@@ -16,17 +17,13 @@ class Comment extends Component {
   handleFormSubmit = (event) => {
     event.preventDefault();
 
-    const { title, comment} = this.state
+    const { token, title, comment} = this.state
 
-    CommentService.addComment({ title, comment})
+    CommentService.addComment({ token, title, comment})
       .then((data) => {
-        if (data.comentario.title) {
-          this.setState({
-            title:"",
-            comment:""
-          });
-          
-        }
+        //titulo comentario usuario
+        this.props.history.push("/admin");
+        return;
       })
       .catch(error => console.log(error))
   }

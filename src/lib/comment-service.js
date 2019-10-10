@@ -9,8 +9,8 @@ class CommentService {
   }
 
   addComment(commentUser) {
-    const { title, comment } = commentUser;
-    return this.comment.post('/comentario', {title, comment})
+    const { token,title, comment } = commentUser;
+    return this.comment.post(`/comentario/${token}`, {title, comment})
       .then(({ data }) => data);
       // Enviamos los datos al frontend
   }
