@@ -9,7 +9,8 @@ class Signup extends Component {
     surnames:"",
     email:"",
     password: "",
-    confirmPassword:""
+    confirmPassword:"",
+    error:""
   };
 
   handleChange = (event) => {
@@ -20,9 +21,15 @@ class Signup extends Component {
   handleFormSubmit = (event) => {
     event.preventDefault();
 
-    const { firstname, surnames, email, password, confirmPassword } = this.state;
+    const { error, firstname, surnames, email, password, confirmPassword } = this.state;
+    
+    if( password === confirmPassword){
+    
+    this.setState({
+      error:""
+    })
 
-    SignupService.signup({ firstname, surnames, email, password, confirmPassword })
+    SignupService.signup({ error, firstname, surnames, email, password, confirmPassword })
       .then((data) => {
         if (data.usuario.email) {
           this.setState({
@@ -30,17 +37,22 @@ class Signup extends Component {
             surnames:"",
             email:"",
             password: "",
-            confirmPassword:""
+            confirmPassword:"",
+            error:""
           });
           
         }
       })
       .catch(error => console.log(error))
-  }
-
+    } else {
+      this.setState({
+        error:"Las contraseñas no coinciden"
+      })
+    }
+}
   render() {
 
-    const { firstname, surnames, email, password, confirmPassword } = this.state;
+    const { error, firstname, surnames, email, password, confirmPassword } = this.state;
 
     return (
       <div class="row">
@@ -83,6 +95,7 @@ class Signup extends Component {
           </div>
           
         </form>
+        {error}
       </div>
     );
   }

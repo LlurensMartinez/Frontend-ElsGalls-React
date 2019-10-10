@@ -45,6 +45,13 @@ nav{
   font-weight: 900;
 }
 
+.containerLogSign{
+  position:absolute;
+  display: flex;
+  width: 15%;
+  height: 100%;
+}
+
 
 /* Home */
 
