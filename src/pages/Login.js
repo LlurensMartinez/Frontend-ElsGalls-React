@@ -31,6 +31,9 @@ class Login extends Component {
 
         localStorage.setItem('token', data.token);
         localStorage.setItem('logedUserId', data.usuario._id);
+        localStorage.setItem('nameUser', data.usuario.nombre);
+        localStorage.setItem('surnamesUser', data.usuario.apellidos);
+        console.log(localStorage)
         this.props.history.push("/admin");
         return;
       })

@@ -1,30 +1,46 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import Comment from './comment';
+import CommentService from '../lib/comment-service'
+
+import Slider from 'react-animated-slider';
+import 'react-animated-slider/build/horizontal.css';
 
 class sectionComentarios extends Component {
+  
+  state = {
+    comments: []
+  }
+
+  componentDidMount(){
+   this.getCommentsList();
+  }
+
+  getCommentsList = async () => {
+    await CommentService.getAllComments()
+      .then((data) => {
+        this.setState({
+          comments: data.comments
+        })
+      })
+      .catch(error => console.log(error))
+  }
+
   render() {
+    const{ comments } = this.state
     return (
       <section className="sectionComments">
         <div className="commentsContainer">
-            <h3>COMENTARIOS</h3>
+            <h3>ULTIMOS COMENTARIOS</h3>
             <p>*********</p>
-            <div className="bxslider">
-              <div class="comment">
-                <h2>Llorenç Martinez</h2>
-                <h3>Full Stack Developer</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur mollitia nostrum nisi obcaecati exercitationem velit earum consequatur maxime totam tempora, ad quas distinctio fugit eveniet quae animi? Laborum, sunt magnam.</p>
-              </div>
-              <div class="comment">
-                <h2>Llorenç Martinez</h2>
-                <h3>Full Stack Developer</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur mollitia nostrum nisi obcaecati exercitationem velit earum consequatur maxime totam tempora, ad quas distinctio fugit eveniet quae animi? Laborum, sunt magnam.</p>
-              </div>
-              <div class="comment">
-                <h2>Llorenç Martinez</h2>
-                <h3>Full Stack Developer</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur mollitia nostrum nisi obcaecati exercitationem velit earum consequatur maxime totam tempora, ad quas distinctio fugit eveniet quae animi? Laborum, sunt magnam.</p>
-              </div>
-            </div>
+            <Slider autoplay={5000}>
+              {comments.map((comment, index) => <div key={index}>
+                  <Comment 
+                      key={comment._id}
+                      comments={comment}
+                  />
+              </div>)}
+            </Slider>
             <div class="btnCommentsContainer">
               <Link class="waves-effect waves-light btn-large" to={`/admin/comment`}>AÑADIR COMENTARIO</Link>
               <Link class="waves-effect waves-light btn-large" to={`/admin/comment/edit`}>EDITAR COMENTARIO</Link>

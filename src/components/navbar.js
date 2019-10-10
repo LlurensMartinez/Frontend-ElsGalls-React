@@ -2,7 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 import Logout from '../pages/Logout'
 
+
 const navbar = () => {
+
+
   return (
     <nav>
       <div className="navbar-fixed">
@@ -10,7 +13,7 @@ const navbar = () => {
         localStorage.getItem('token')
         ?
         <div className="containerLogSign">
-          <p>{localStorage.logedUserId}</p>
+          <p>{localStorage.nameUser} {localStorage.surnamesUser} </p>
           <Logout />
         </div>
         :
