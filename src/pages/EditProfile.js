@@ -8,7 +8,6 @@ class EditProfile extends Component {
     firstname: localStorage.nameUser,
     surnames: localStorage.surnamesUser,
     img: "",
-    urlImg: localStorage.urlImg,
     password: "",
     confirmPassword:"",
     token: localStorage.token,
@@ -55,12 +54,15 @@ class EditProfile extends Component {
   }
 
   handleFormImgSubmit = (e) => {
-    const { id, token, img, file } = this.state
+    const { id, token, file } = this.state
     e.preventDefault();
 
-    ProfileService.editImg({ id, img, token, file })
+    ProfileService.editImg({ id, token, file })
       .then((data) => {
-        localStorage.setItem('imgUser', data.usuario.img);
+        this.setState({
+          img: data.usuario.img
+        })
+        localStorage.setItem('img', data.usuario.img);
       })
       .catch(error => console.log(error))
   }
@@ -73,7 +75,6 @@ class EditProfile extends Component {
       .then((data) => {
         localStorage.setItem('nameUser', data.usuario.nombre);
         localStorage.setItem('surnamesUser', data.usuario.apellidos);
-        localStorage.setItem('img', data.usuario.img);
         this.props.history.push("/admin");
         return;
       })
@@ -82,11 +83,10 @@ class EditProfile extends Component {
   }
 
   render() {
-    console.log(localStorage)
 
     let { imagePreviewUrl,firstname, surnames, password, confirmPassword } = this.state;
 
-    let imgProfile = `${process.env.REACT_APP_BACKEND_URL}/imagen/usuarios/${localStorage.imgUser}`
+    let imgProfile = `${process.env.REACT_APP_BACKEND_URL}/imagen/usuarios/${localStorage.img}`
 
     return (
       <div className="row">

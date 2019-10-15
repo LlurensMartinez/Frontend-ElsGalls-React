@@ -5,7 +5,8 @@ import Logout from '../pages/Logout'
 
 const navbar = () => {
 
-
+  let imgProfile = `${process.env.REACT_APP_BACKEND_URL}/imagen/usuarios/${localStorage.img}`;
+  console.log(localStorage)
   return (
     <nav>
       <div className="navbar-fixed">
@@ -13,7 +14,7 @@ const navbar = () => {
         localStorage.getItem('token')
         ?
         <div className="containerLogSign">
-          <Link to={`/admin/profile`}><img id="imgNavProfile" src={localStorage.imgUser} alt="Imagen de perfil"/></Link>
+          <Link to={`/admin/profile`}><img id="imgNavProfile" src={imgProfile} alt="Imagen de perfil"/></Link>
           <p>{localStorage.nameUser} {localStorage.surnamesUser} </p>
           <Logout />
         </div>

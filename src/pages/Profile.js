@@ -4,9 +4,11 @@ import { Link } from 'react-router-dom';
 class Profile extends Component {
   
   render() {
+
+    let imgProfile = `${process.env.REACT_APP_BACKEND_URL}/imagen/usuarios/${localStorage.img}`
     return (
       <div>
-        {/* <img src="file:///Users/llorensmartinezmartinez/Desktop/WebELsGalls/backendElsGalls/uploads/usuarios/5d9dde8ed4e2798755f28619-988.jpg" alt="Imagen de perfil"/> */}
+        <img  id="profileImage" src={imgProfile} alt="IMAGEN"/>
         <h2>Nombre: {localStorage.nameUser}</h2>
         <h3>Apellidos: {localStorage.surnamesUser}</h3>
         <p>Email: {localStorage.emailUser}</p>

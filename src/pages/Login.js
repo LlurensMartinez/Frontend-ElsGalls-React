@@ -33,8 +33,8 @@ class Login extends Component {
         localStorage.setItem('nameUser', data.usuario.nombre);
         localStorage.setItem('surnamesUser', data.usuario.apellidos);
         localStorage.setItem('emailUser', data.usuario.email);
-        localStorage.setItem('imgUser', data.usuario.img);
-
+        localStorage.setItem('img', data.usuario.img);
+        console.log(localStorage)
         this.props.history.push("/admin");
         return;
       })
