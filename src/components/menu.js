@@ -2,7 +2,7 @@ import React from 'react';
 
 const menu = () => {
   return (
-    <section className="sectionMenu">
+    <section id="sectionMenu">
       <div className="container containerMenu">
           <h2>Descubre</h2>
           <h3>MENU DIARIO</h3>

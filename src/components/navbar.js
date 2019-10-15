@@ -13,6 +13,7 @@ const navbar = () => {
         localStorage.getItem('token')
         ?
         <div className="containerLogSign">
+          <Link to={`/admin/profile`}><img id="imgNavProfile" src={localStorage.imgUser} alt="Imagen de perfil"/></Link>
           <p>{localStorage.nameUser} {localStorage.surnamesUser} </p>
           <Logout />
         </div>
@@ -23,12 +24,12 @@ const navbar = () => {
         </div>
       }
         <ul id="nav-mobile" className="right hide-on-med-and-down">
-          <li><a href="sass.html">PAGINA PRINCIPAL</a></li>
-          <li><a href="badges.html">MENU</a></li>
-          <li><a href="collapsible.html">TORTILLAS</a></li>
-          <li><a href="collapsible.html">COMENTARIOS</a></li>
-          <li><a href="collapsible.html">CONTACTO</a></li>
-          <li><a href="collapsible.html">UBICACION</a></li>
+          <li><a href="#home">PAGINA PRINCIPAL</a></li>
+          <li><a href="#sectionMenu">MENU</a></li>
+          <li><a href="#sectionOmeletes">TORTILLAS</a></li>
+          <li><a href="#sectionComments">COMENTARIOS</a></li>
+          <li><a href="#sectionContact">CONTACTO</a></li>
+          <li><a href="#">UBICACION</a></li>
         </ul>
       </div>
     </nav>

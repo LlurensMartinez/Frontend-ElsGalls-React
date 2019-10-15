@@ -4,7 +4,7 @@ import FormContact from './formContact'
 class sectionContact extends Component {
   render() {
     return (
-      <section className="sectionContact">
+      <section id="sectionContact">
         <div className="containerContact">
             <div className="containerEmailImgOpen">
                 <h4>ENVIAR EMAIL</h4>

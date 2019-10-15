@@ -28,12 +28,13 @@ class Login extends Component {
 
     LoginService.login({ email, password })
       .then((data) => {
-
         localStorage.setItem('token', data.token);
         localStorage.setItem('logedUserId', data.usuario._id);
         localStorage.setItem('nameUser', data.usuario.nombre);
         localStorage.setItem('surnamesUser', data.usuario.apellidos);
-        console.log(localStorage)
+        localStorage.setItem('emailUser', data.usuario.email);
+        localStorage.setItem('imgUser', data.usuario.img);
+
         this.props.history.push("/admin");
         return;
       })

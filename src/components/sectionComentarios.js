@@ -29,7 +29,7 @@ class sectionComentarios extends Component {
   render() {
     const{ comments } = this.state
     return (
-      <section className="sectionComments">
+      <section id="sectionComments">
         <div className="commentsContainer">
             <h3>ULTIMOS COMENTARIOS</h3>
             <p>*********</p>

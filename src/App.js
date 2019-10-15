@@ -7,6 +7,9 @@ import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Comment from './pages/Comment';
 import Logout from './pages/Logout';
+import EditComment from './pages/EditComment';
+import Profile from './pages/Profile';
+import EditProfile from './pages/EditProfile';
 import './App.css';
 
 function App() {
@@ -20,6 +23,9 @@ function App() {
           <Route exact path="/login" component={Login} />
           <Route exact path="/logout" component={Logout} />
           <PrivateRoute exact path="/admin/comment" component={Comment} />
+          <PrivateRoute exact path="/admin/comment/edit" component={EditComment} />
+          <PrivateRoute exact path="/admin/profile" component={Profile} />
+          <PrivateRoute exact path="/admin/profile/edit" component={EditProfile} />
       </Switch>
     </Router>
   );

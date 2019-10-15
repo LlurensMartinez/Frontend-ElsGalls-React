@@ -2,7 +2,7 @@ import React from 'react';
 
 const sectionInfo = () => {
   return (
-    <section className="sectionInfo">
+    <section id="sectionInfo">
       <div className="container">
           <h2>Como en casa</h2>
           <h3>VERDADERA COCINA ESPAÑOLA</h3>

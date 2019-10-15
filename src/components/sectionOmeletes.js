@@ -4,7 +4,7 @@ import Omelete from './omelete'
 class sectionOmeletes extends Component {
   render() {
     return (
-      <section className="sectionOmeletes">
+      <section id="sectionOmeletes">
         <div className="containerInfoOmeltes container">
             <h2>Prueva</h2>
             <h3>NUESTRAS TORTILLAS</h3>

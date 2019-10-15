@@ -27,6 +27,11 @@
 
 /* NavBar */
 
+#imgNavProfile{
+  width: 50px;
+  height: 50px;
+}
+
 #nav-mobile li a:hover{
   color: #fd6934;
   border: 2px solid #fd6934;;
@@ -54,7 +59,7 @@ nav{
 
 /* Home */
 
-.home{
+#home{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -114,7 +119,7 @@ nav{
 
 /* SECTION INFO */
 
-.sectionInfo{
+#sectionInfo{
   display: flex;
   justify-content: center;
   align-items:center;
@@ -123,6 +128,11 @@ nav{
   background-image: url(https://codex-themes.com/thegem/sites/delicious-restaurant/wp-content/uploads/2018/12/1.png);
   background-repeat: no-repeat;
   background-position: center top;
+}
+
+#imgCommentProfile{
+  width: 100px;
+  height: 100px;
 }
 
 .container h2 {
@@ -164,7 +174,7 @@ nav{
 
 /* SECTION MENU */
 
-.sectionMenu{
+#sectionMenu{
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -186,7 +196,7 @@ nav{
 
 /* SECTION OMELETES */
 
-.sectionOmeletes{
+#sectionOmeletes{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -251,7 +261,7 @@ nav{
 
 /* SECTION COMMENTS */
 
-.sectionComments{
+#sectionComments{
   display: flex;
   align-items: flex-start;
   width: 100%;
@@ -305,7 +315,7 @@ nav{
 
 /* SECTION CONTACT */
 
-.sectionContact{
+#sectionContact{
   margin-top:10%;
   width: 100%;
   display: flex;
