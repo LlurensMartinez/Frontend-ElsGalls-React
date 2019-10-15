@@ -17,7 +17,7 @@ class sectionComentarios extends Component {
   }
 
   getCommentsList = async () => {
-    await CommentService.getAllComments()
+    await CommentService.getAllComments(localStorage.logedUserId)
       .then((data) => {
         this.setState({
           comments: data.comments

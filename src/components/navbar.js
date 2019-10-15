@@ -6,7 +6,7 @@ import Logout from '../pages/Logout'
 const navbar = () => {
 
   let imgProfile = `${process.env.REACT_APP_BACKEND_URL}/imagen/usuarios/${localStorage.img}`;
-  console.log(localStorage)
+
   return (
     <nav>
       <div className="navbar-fixed">

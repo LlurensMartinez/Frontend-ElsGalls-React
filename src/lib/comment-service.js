@@ -15,8 +15,9 @@ class CommentService {
       // Enviamos los datos al frontend
   }
 
+
   getAllComments() {
-    return this.comment.get('/comentario')
+    return this.comment.get(`/comentario/`)
       .then(({ data }) => data);
       // Enviamos los datos al frontend
   }
