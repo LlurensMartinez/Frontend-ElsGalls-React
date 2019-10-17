@@ -26,8 +26,8 @@ class ProfileService {
   }
 
   editUser(user) {
-    const { id, token, firstname, surnames, img } = user
-    return this.user.put(`/usuario/${id}/${token}`, {firstname, surnames, img})
+    const { id, token, firstname, surnames, img, password } = user
+    return this.user.put(`/usuario/${id}/${token}`, {firstname, surnames, img, password })
       .then(({ data }) => data);
       // Enviamos los datos al frontend
   }

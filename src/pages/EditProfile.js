@@ -17,6 +17,7 @@ class EditProfile extends Component {
 
   componentDidMount () {
     this.getUserImage();
+    console.log(this.state)
   }
 
   getUserImage = () => {
@@ -69,9 +70,10 @@ class EditProfile extends Component {
   
   handleFormSubmit = (event) => {
     event.preventDefault();
-    const { id, token, firstname, surnames, img } = this.state
+    const { id, token, firstname, surnames, img, password, confirmPassword  } = this.state
 
-     ProfileService.editUser({ id, token, firstname, surnames, img })
+     if(password === confirmPassword){
+       ProfileService.editUser({ id, token, firstname, surnames, img, password, confirmPassword })
       .then((data) => {
         localStorage.setItem('nameUser', data.usuario.nombre);
         localStorage.setItem('surnamesUser', data.usuario.apellidos);
@@ -79,12 +81,18 @@ class EditProfile extends Component {
         return;
       })
       .catch(error => console.log(error));
+     } else {
+       this.setState({
+         error:"La contraseña no coincide"
+       })
+     }
+     
 
   }
 
   render() {
 
-    let { imagePreviewUrl,firstname, surnames, password, confirmPassword } = this.state;
+    let { imagePreviewUrl,firstname, surnames, password, confirmPassword, error } = this.state;
 
     let imgProfile = `${process.env.REACT_APP_BACKEND_URL}/imagen/usuarios/${localStorage.img}`
 
@@ -134,6 +142,7 @@ class EditProfile extends Component {
           </div>
           
         </form>
+        <p>{error}</p>
       </div>
     );
   }
