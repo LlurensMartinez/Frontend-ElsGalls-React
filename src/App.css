@@ -10,6 +10,7 @@
 
 .btn, .btn-large, .btn-small{
   background-color: #fd6934;
+  border-radius: 30px;
 }
 
 .btn:hover, .btn-large:hover, .btn-small:hover{

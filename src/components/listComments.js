@@ -9,7 +9,7 @@ class listComments extends Component {
       <div className="commentContainer">
           <h2>{title}</h2>
           <h4>{comment}</h4>
-          <Link class="waves-effect waves-light btn-large" to={`/admin/comment/edit/${_id}`}>EDITAR COMENTARIO</Link>
+          <Link class="waves-effect waves-light btn-large" to={`/admin/comment/edit/${_id}`}>EDITAR</Link>
       </div>
     );
   }

@@ -26,20 +26,27 @@ class sectionComentarios extends Component {
       .catch(error => console.log(error))
   }
 
-  render() {
+  sliceResultsAndMap = () =>{
     const{ comments } = this.state
+
+    let sliceComments = comments.slice(comments.length -11, comments.length);
+    return (sliceComments.map((comment, index) => 
+              <div key={index}>
+                  <Comment 
+                      key={comment._id}
+                      comments={comment}
+                  />
+              </div>))
+  }
+
+  render() {
     return (
       <section id="sectionComments">
         <div className="commentsContainer">
             <h3>ULTIMOS COMENTARIOS</h3>
             <p>*********</p>
             <Slider autoplay={5000}>
-              {comments.map((comment, index) => <div key={index}>
-                  <Comment 
-                      key={comment._id}
-                      comments={comment}
-                  />
-              </div>)}
+              {this.sliceResultsAndMap()}
             </Slider>
             <div class="btnCommentsContainer">
               <Link class="waves-effect waves-light btn-large" to={`/admin/comment`}>AÑADIR COMENTARIO</Link>
