@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import CommentService from '../lib/comment-service'
 import FormComment from '../components/formComment'
+import CommentService from '../lib/comment-service'
 
-class Comment extends Component {
+class EditCommentId extends Component {
 
   state = {
     title: "",
     comment: "",
-    token: localStorage.token
+    token: localStorage.token,
   };
 
   handleChange = (event) => {
@@ -18,28 +18,33 @@ class Comment extends Component {
   handleFormSubmit = (event) => {
     event.preventDefault();
 
-    const { token, title, comment} = this.state
+    let id = this.props.match.params.id
 
-    CommentService.addComment({ token, title, comment})
+    const { title, comment, token} = this.state
+
+    CommentService.putComment({ id, title, comment, token})
       .then((data) => {
         //titulo comentario usuario
-        this.props.history.push("/admin");
+        this.props.history.push("/admin/comment/edit");
         return;
       })
       .catch(error => console.log(error))
   }
+
+
   render() {
     const {title, comment } = this.state
     return (
-      
-      <FormComment 
+      <div>
+        <FormComment 
           submit = {this.handleFormSubmit}
           comment = {comment}
           title = {title}
           change = {this.handleChange}
       />
+      </div>
     );
   }
 }
 
-export default Comment;
+export default EditCommentId;

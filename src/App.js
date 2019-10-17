@@ -8,6 +8,7 @@ import Login from './pages/Login';
 import Comment from './pages/Comment';
 import Logout from './pages/Logout';
 import EditCommentList from './pages/EditCommentList';
+import EditCommentId from './pages/EditCommentId';
 import Profile from './pages/Profile';
 import EditProfile from './pages/EditProfile';
 import './App.css';
@@ -24,6 +25,7 @@ function App() {
           <Route exact path="/logout" component={Logout} />
           <PrivateRoute exact path="/admin/comment" component={Comment} />
           <PrivateRoute exact path="/admin/comment/edit" component={EditCommentList} />
+          <PrivateRoute exact path="/admin/comment/edit/:id" component={EditCommentId} />
           <PrivateRoute exact path="/admin/profile" component={Profile} />
           <PrivateRoute exact path="/admin/profile/edit" component={EditProfile} />
       </Switch>

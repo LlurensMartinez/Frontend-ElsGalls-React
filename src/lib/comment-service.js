@@ -22,6 +22,13 @@ class CommentService {
       // Enviamos los datos al frontend
   }
 
+  putComment(commentUser) {
+    const { id, title, comment, token } = commentUser;
+    return this.comment.put(`/comentario/${id}/${token}`, {title, comment, token})
+      .then(({ data }) => data);
+      // Enviamos los datos al frontend
+  }
+
 }
 
 const commentService = new CommentService();
