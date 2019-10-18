@@ -17,7 +17,6 @@ class EditProfile extends Component {
 
   componentDidMount () {
     this.getUserImage();
-    console.log(this.state)
   }
 
   getUserImage = () => {
@@ -124,14 +123,14 @@ class EditProfile extends Component {
           <div class="row">
             <div class="input-field col s6">
               <input id="password" type="password" class="validate" name="password" value={password} onChange={this.handleChange}/>
-              <label  className="active" for="password">Password</label>
+              <label  className="active" for="password"> Cambiar Contraseña</label>
             </div>
           </div>
 
           <div class="row">
             <div class="input-field col s6">
               <input id="password" type="password" class="validate" name="confirmPassword" value={confirmPassword} onChange={this.handleChange}/>
-              <label className="active" for="password">confirmPassword</label>
+              <label className="active" for="password">Repite Contraseña</label>
             </div>
           </div>
 

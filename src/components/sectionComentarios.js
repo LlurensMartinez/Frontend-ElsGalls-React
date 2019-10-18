@@ -17,7 +17,7 @@ class sectionComentarios extends Component {
   }
 
   getCommentsList = async () => {
-    await CommentService.getAllComments(localStorage.logedUserId)
+    await CommentService.getAllComments()
       .then((data) => {
         this.setState({
           comments: data.comments
@@ -29,14 +29,15 @@ class sectionComentarios extends Component {
   sliceResultsAndMap = () =>{
     const{ comments } = this.state
 
-    let sliceComments = comments.slice(comments.length -11, comments.length);
-    return (sliceComments.map((comment, index) => 
+    let sliceComments = comments.slice(comments.length - 5, comments.length).reverse();
+    
+    return sliceComments.map((comment, index) => 
               <div key={index}>
                   <Comment 
                       key={comment._id}
                       comments={comment}
                   />
-              </div>))
+              </div>)
   }
 
   render() {

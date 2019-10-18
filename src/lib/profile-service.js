@@ -10,7 +10,7 @@ class ProfileService {
 
   
   editImg(imgUser) {
-    const { id, token, file, img } = imgUser;
+    const { id, file } = imgUser;
 
     var formData = new FormData();
     formData.append('file', file);

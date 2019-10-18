@@ -5,15 +5,17 @@ import ListComments from '../components/listComments'
 class editCommentList extends Component {
 
   state = {
-    comments: []
+    comments: [],
+    token: localStorage.token,
+    message: ""
   }
 
   componentDidMount(){
     this.getUserCommentsList();
    }
 
-  getUserCommentsList = async () => {
-    await CommentService.getAllComments()
+  getUserCommentsList = () => {
+    CommentService.getAllComments()
       .then((data) => {
         this.setState({
           comments: data.comments
@@ -22,7 +24,19 @@ class editCommentList extends Component {
       .catch(error => console.log(error))
   }
 
-  renderComentList= () =>{
+  deleteComment = (id) => {
+    const {token} = this.state
+    CommentService.deleteComment( {id, token} )
+      .then((data) => {
+        this.setState({
+          message: data.message
+        })
+        this.getUserCommentsList();
+      })
+      .catch(error => console.log(error))
+  }
+
+  renderComentList = () =>{
     const {comments} = this.state
 
     const userComments = comments.filter(user => user.user._id === localStorage.logedUserId);
@@ -33,6 +47,7 @@ class editCommentList extends Component {
               <ListComments 
                   key={comment._id}
                   comments={comment}
+                  onClick= {()=> this.deleteComment(comment._id)}
               />
           </div>)
   }

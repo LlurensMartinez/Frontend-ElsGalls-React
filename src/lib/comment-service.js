@@ -19,14 +19,18 @@ class CommentService {
   getAllComments() {
     return this.comment.get(`/comentario/`)
       .then(({ data }) => data);
-      // Enviamos los datos al frontend
   }
 
   putComment(commentUser) {
     const { id, title, comment, token } = commentUser;
     return this.comment.put(`/comentario/${id}/${token}`, {title, comment, token})
       .then(({ data }) => data);
-      // Enviamos los datos al frontend
+  }
+
+  deleteComment(user) {
+    const { id, token } = user;
+    return this.comment.delete(`/comentario/${id}/${token}`)
+      .then(({ data }) => data);
   }
 
 }
