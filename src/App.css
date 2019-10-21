@@ -178,21 +178,14 @@ nav{
 
 #sectionMenu{
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items:center;
+  flex-direction: column;
+  padding-top: 5%;
   width: 100%;
   height: 80vh;
-  background-image: url(https://codex-themes.com/thegem/sites/delicious-restaurant/wp-content/uploads/2018/12/26.jpg);
+  background-image: url(https://codex-themes.com/thegem/sites/delicious-restaurant/wp-content/uploads/2018/12/4-1.jpg) !important;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
-}
-
-.containerMenu{
-  width: 50%;
-  height: 100%;
-  padding: 5%;
 }
 
 
