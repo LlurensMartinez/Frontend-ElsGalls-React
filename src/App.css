@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:200,400,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,400,500,900&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Herr+Von+Muellerhoff&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
 
@@ -181,11 +181,79 @@ nav{
   flex-direction: column;
   padding-top: 5%;
   width: 100%;
-  height: 80vh;
   background-image: url(https://codex-themes.com/thegem/sites/delicious-restaurant/wp-content/uploads/2018/12/4-1.jpg) !important;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
+}
+
+.containerMenu{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 5%;
+  padding-bottom: 5%;
+}
+
+.containerPlates{
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  background-color: whitesmoke;
+  align-items: center;
+  width: 350px;
+  margin-top: 80px;
+}
+
+.containerMiddlePricePosition{
+  position: absolute;
+  top: -50px;
+}
+
+.containerMiddlePrice{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 100%;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  background-color: white;
+  color: #fd6934;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.imageMenu{
+  width: 100%;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+}
+
+.imageMenuFirstPlate{
+background-image: url(https://images.unsplash.com/photo-1473093226795-af9932fe5856?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1885&q=80);
+}
+
+.imageMenuSecondPlate{
+  background-image: url(https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3300&q=80);
+}
+
+.imageMenuDesserts{
+  background-image: url(https://images.unsplash.com/photo-1524351199678-941a58a3df50?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80);
+}
+
+
+.containerPlates figure{
+  font-weight: 500;
+  font-size: 1.2em;
+  text-align: center;
+  width: 100%;
 }
 
 
@@ -375,6 +443,20 @@ transition: transform 1s;
   height: 40vh;
   width: 100%;
   border-radius: 10px;
+}
+
+.ContainerTypesMenu{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.typesMenu p {
+  font-size: 3rem;
+}
+
+.iconMenuStyle{
+  font-size: 2rem;
 }
 
 
