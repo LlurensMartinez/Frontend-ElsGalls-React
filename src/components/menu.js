@@ -1,6 +1,7 @@
 import React from 'react';
 
 const menu = () => {
+
   return (
     <section id="sectionMenu">
       <div className="container">
@@ -64,41 +65,47 @@ const menu = () => {
       <div className="ContainerTypesMenu">
           <div className="typesMenu">
             <h4>MENU PRIMERO</h4>
-            <i class="material-icons small">room_service</i>
-            <i class="fas fa-plus"></i>
-            <span className="iconMenuStyle"><i class="fas fa-wine-glass-alt"></i></span>
-            <i class="fas fa-plus"></i>
-            <span className="iconMenuStyle"><i class="fas fa-bread-slice"></i></span>
-            <i class="fas fa-plus"></i>
-            <span className="iconMenuStyle"><i class="fas fa-coffee"></i></span>
-            <span className="iconMenuStyle"><i class="fas fa-ice-cream"></i></span>
+            <div className="typesMenuIcons">
+                <i className="material-icons small">room_service</i>
+                <i className="plus fas fa-plus"></i>
+                <span className="iconMenuStyle"><i className="fas fa-wine-glass-alt"></i></span>
+                <i className="plus fas fa-plus"></i>
+                <span className="iconMenuStyle"><i className="fas fa-bread-slice"></i></span>
+                <i className="plus fas fa-plus"></i>
+                <span className="iconMenuStyle"><i className="fas fa-coffee"> o</i></span>
+                <span className="iconMenuStyle"><i className="fas fa-ice-cream"></i></span>
+            </div>
             <p>8,10€</p>
           </div>
 
           <div className="typesMenu">
             <h4>MENU SEGUNDO</h4>
-            <i class="material-icons small">room_service</i>
-            <i class="fas fa-plus"></i>
-            <span className="iconMenuStyle"><i class="fas fa-wine-glass-alt"></i></span>
-            <i class="fas fa-plus"></i>
-            <span className="iconMenuStyle"><i class="fas fa-bread-slice"></i></span>
-            <i class="fas fa-plus"></i>
-            <span className="iconMenuStyle"><i class="fas fa-coffee"></i></span>
-            <span className="iconMenuStyle"><i class="fas fa-ice-cream"></i></span>
+            <div className="typesMenuIcons">
+                <i class="material-icons small">room_service</i>
+                <i class="plus fas fa-plus"></i>
+                <span className="iconMenuStyle"><i class="fas fa-wine-glass-alt"></i></span>
+                <i class="plus fas fa-plus"></i>
+                <span className="iconMenuStyle"><i class="fas fa-bread-slice"></i></span>
+                <i class="plus fas fa-plus"></i>
+                <span className="iconMenuStyle"><i class="fas fa-coffee"> o</i></span>
+                <span className="iconMenuStyle"><i class="fas fa-ice-cream"></i></span>
+            </div>  
             <p>9,10€</p>
           </div>
 
           <div className="typesMenu">
             <h4>MENU COMPLETO</h4>
-            <i class="material-icons small">room_service</i>
-            <i class="material-icons small">room_service</i>
-            <i class="fas fa-plus"></i>
-            <span className="iconMenuStyle"><i class="fas fa-wine-glass-alt"></i></span>
-            <i class="fas fa-plus"></i>
-            <span className="iconMenuStyle"><i class="fas fa-bread-slice"></i></span>
-            <i class="fas fa-plus"></i>
-            <span className="iconMenuStyle"><i class="fas fa-coffee"></i></span>
-            <span className="iconMenuStyle"><i class="fas fa-ice-cream"></i></span>
+            <div className="typesMenuIcons">
+                <i class="material-icons small">room_service</i>
+                <i class="material-icons small">room_service</i>
+                <i class="plus fas fa-plus"></i>
+                <span className="iconMenuStyle"><i class="fas fa-wine-glass-alt"></i></span>
+                <i class="plus fas fa-plus"></i>
+                <span className="iconMenuStyle"><i class="fas fa-bread-slice"></i></span>
+                <i class="plus fas fa-plus"></i>
+                <span className="iconMenuStyle"><i class="fas fa-coffee"> o</i></span>    
+                <span className="iconMenuStyle"><i class="fas fa-ice-cream"></i></span>
+            </div>
             <p>12,40€</p>
           </div>
       </div>

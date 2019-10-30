@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:200,400,500,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,400,500,600,900&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Herr+Von+Muellerhoff&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
 
@@ -106,14 +106,6 @@ nav{
   font-size: 1.8rem;
   font-weight: 500;
   color: whitesmoke;
-}
-
-#tel{
-  -webkit-text-stroke: 0.1px black;
-  font-size: 3rem;
-  font-weight: 400;
-  color: whitesmoke;
-  margin-top: auto;
 }
 
 
@@ -254,6 +246,50 @@ background-image: url(https://images.unsplash.com/photo-1473093226795-af9932fe58
   font-size: 1.2em;
   text-align: center;
   width: 100%;
+}
+
+.ContainerTypesMenu{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 4%;
+}
+
+.typesMenu{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.typesMenu p{
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.typesMenu h4{
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #fd6934;
+}
+
+.iconMenuStyle{
+  font-size: 2rem;
+}
+
+.typesMenuIcons{
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.typesMenuIcons i{
+  font-size: 1.5rem;
+}
+
+.plus{
+  font-size: 1rem !important;
 }
 
 
@@ -444,21 +480,6 @@ transition: transform 1s;
   width: 100%;
   border-radius: 10px;
 }
-
-.ContainerTypesMenu{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-
-.typesMenu p {
-  font-size: 3rem;
-}
-
-.iconMenuStyle{
-  font-size: 2rem;
-}
-
 
 /* PROFILE */
 

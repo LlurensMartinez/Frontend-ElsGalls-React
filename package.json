@@ -5,6 +5,7 @@
   "dependencies": {
     "axios": "^0.19.0",
     "jquery": "^3.4.1",
+    "materialize-css": "^1.0.0-rc.2",
     "react": "^16.9.0",
     "react-animated-slider": "^1.1.4",
     "react-dom": "^16.9.0",
