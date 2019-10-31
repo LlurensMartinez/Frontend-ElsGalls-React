@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ProfileService from '../lib/profile-service'
+import Navbar from '../components/navbar'
 
 class EditProfile extends Component {
 
@@ -96,53 +97,56 @@ class EditProfile extends Component {
     let imgProfile = `${process.env.REACT_APP_BACKEND_URL}/imagen/usuarios/${localStorage.img}`
 
     return (
+      <>
+      <Navbar />
       <div className="row">
-      <img src={imgProfile} alt="IMAGEN"/>
-      <img className="imgEditProfile" src={imagePreviewUrl} alt="Imagen de perfil"/>
+        <img src={imgProfile} alt="IMAGEN"/>
+        {/* <img className="imgEditProfile" src={imagePreviewUrl} alt="Imagen de perfil"/> */}
 
-      <form  onSubmit={this.handleFormImgSubmit} encType="multipart/form-data" action="">
-          <input type="file" onChange={this._handleImageChange} name="file" className="filetype" id="group_image"/> 
-          <input type="submit" value="upload"></input>
-      </form>
-
-        <form onSubmit={this.handleFormSubmit}>
-          <div class="row">
-            <div class="input-field col s6">
-              <input id="first_name" type="text" class="validate" name="firstname" value={firstname} onChange={this.handleChange}/>
-              <label  className="active" for="first_name">Nombre</label>
-            </div>
-          </div>  
-
-          <div class="row">
-            <div class="input-field col s6">
-              <input id="last_name" type="text" class="validate" name="surnames" value={surnames} onChange={this.handleChange}/>
-              <label  className="active" for="last_name">Apellidos</label>
-            </div>
-           </div>
-
-          <div class="row">
-            <div class="input-field col s6">
-              <input id="password" type="password" class="validate" name="password" value={password} onChange={this.handleChange}/>
-              <label  className="active" for="password"> Cambiar Contraseña</label>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="input-field col s6">
-              <input id="password" type="password" class="validate" name="confirmPassword" value={confirmPassword} onChange={this.handleChange}/>
-              <label className="active" for="password">Repite Contraseña</label>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="input-field col s6">
-            <input type="submit" value="REGÍSTRATE" />
-            </div>
-          </div>
-          
+        <form  onSubmit={this.handleFormImgSubmit} encType="multipart/form-data" action="">
+            <input type="file" onChange={this._handleImageChange} name="file" className="filetype" id="group_image"/> 
+            <input type="submit" value="upload"></input>
         </form>
-        <p>{error}</p>
+
+          <form onSubmit={this.handleFormSubmit}>
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="first_name" type="text" class="validate" name="firstname" value={firstname} onChange={this.handleChange}/>
+                <label  className="active" for="first_name">Nombre</label>
+              </div>
+            </div>  
+
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="last_name" type="text" class="validate" name="surnames" value={surnames} onChange={this.handleChange}/>
+                <label  className="active" for="last_name">Apellidos</label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="password" type="password" class="validate" name="password" value={password} onChange={this.handleChange}/>
+                <label  className="active" for="password"> Cambiar Contraseña</label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="password" type="password" class="validate" name="confirmPassword" value={confirmPassword} onChange={this.handleChange}/>
+                <label className="active" for="password">Repite Contraseña</label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="input-field col s6">
+              <input type="submit" value="EDITAR" />
+              </div>
+            </div>
+            
+          </form>
+          <p>{error}</p>
       </div>
+      </>
     );
   }
 }

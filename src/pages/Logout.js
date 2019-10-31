@@ -17,7 +17,7 @@ class Logout extends Component {
 
   render() {
     return (
-      <a href="/" onClick ={this.exit}>Logout</a>
+      <a href="/" onClick ={this.exit}>Cerrar sessión</a>
     );
   }
 }

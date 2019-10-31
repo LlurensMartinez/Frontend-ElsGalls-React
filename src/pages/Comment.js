@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import CommentService from '../lib/comment-service'
 import FormComment from '../components/formComment'
+import Navbar from '../components/navbar'
 
 class Comment extends Component {
 
@@ -31,13 +32,15 @@ class Comment extends Component {
   render() {
     const {title, comment } = this.state
     return (
-      
-      <FormComment 
-          submit = {this.handleFormSubmit}
-          comment = {comment}
-          title = {title}
-          change = {this.handleChange}
-      />
+      <>
+        < Navbar />
+        <FormComment 
+            submit = {this.handleFormSubmit}
+            comment = {comment}
+            title = {title}
+            change = {this.handleChange}
+        />
+      </>
     );
   }
 }

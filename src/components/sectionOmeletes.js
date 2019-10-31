@@ -15,15 +15,17 @@ class sectionOmeletes extends Component {
               servicio. Nos complace darle la bienvenida como invitados en nuestro restaurante.
             </p>
         </div>
-        <div className="omeletesImgContainer">
-              <Omelete image = '/images/foto5.jpg' title='Tortilla de patatas' />
-              <Omelete image = '/images/foto6.jpg' title='Tortilla de patatas'/>
-              <Omelete image = '/images/foto7.jpg' title='Tortilla de patatas'/>
-              <Omelete image = '/images/foto8.jpg' title='Tortilla de patatas'/>
-              <Omelete image = '/images/foto9.jpg' title='Tortilla de patatas'/>
-              <Omelete image = '/images/foto10.jpg'title='Tortilla de patatas'/>
-              <Omelete image = '/images/foto11.jpg' title='Tortilla de patatas'/>
-              <Omelete image = '/images/foto12.jpg' title='Tortilla de patatas'/>
+        <div className="overflowOmeletes">
+            <div className="omeletesImgContainer">
+                  <Omelete image = '/images/foto5.jpg' title='Tortilla de patatas' />
+                  <Omelete image = '/images/foto6.jpg' title='Tortilla de patatas'/>
+                  <Omelete image = '/images/foto7.jpg' title='Tortilla de patatas'/>
+                  <Omelete image = '/images/foto8.jpg' title='Tortilla de patatas'/>
+                  <Omelete image = '/images/foto9.jpg' title='Tortilla de patatas'/>
+                  <Omelete image = '/images/foto10.jpg'title='Tortilla de patatas'/>
+                  <Omelete image = '/images/foto11.jpg' title='Tortilla de patatas'/>
+                  <Omelete image = '/images/foto12.jpg' title='Tortilla de patatas'/>
+            </div>
         </div>
     </section>
     );

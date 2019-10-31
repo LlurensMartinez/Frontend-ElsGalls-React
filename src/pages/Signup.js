@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import SignupService from '../lib/signUp-service'
+import Navbar from '../components/navbar'
 
 
 class Signup extends Component {
@@ -42,6 +43,7 @@ class Signup extends Component {
           });
         }
         this.props.history.push("/");
+        window.location.reload(true);
         return;
       })
       .catch(error => console.log(error))
@@ -56,6 +58,8 @@ class Signup extends Component {
     const { error, firstname, surnames, email, password, confirmPassword } = this.state;
 
     return (
+      <>
+      <Navbar />
       <div class="row">
         <form class="col s12" onSubmit={this.handleFormSubmit}>
           <div class="row">
@@ -98,6 +102,7 @@ class Signup extends Component {
         </form>
         {error}
       </div>
+      </>
     );
   }
 }

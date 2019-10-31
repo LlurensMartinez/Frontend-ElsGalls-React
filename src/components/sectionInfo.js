@@ -5,8 +5,8 @@ const sectionInfo = () => {
     <section id="sectionInfo">
       <div className="container">
           <h2>Como en casa</h2>
-          <h3>VERDADERA COCINA ESPAÑOLA</h3>
-          <p>*********</p>
+          <h3>RECETAS TRADICIONALES</h3>
+          <br/>
           <p>Nuestro desafío diario: ingredientes de la más alta calidad según 
             recetas tradicionales recién interpretadas y servidas con mucha pasión 
             por el invitado. Disfrute de la excelente cocina mediterránea y del exquisito 

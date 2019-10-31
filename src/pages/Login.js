@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import LoginService from '../lib/login-service'
-
+import Navbar from '../components/navbar'
 
 
 class Login extends Component {
@@ -33,6 +33,7 @@ class Login extends Component {
         localStorage.setItem('img', data.usuario.img);
 
         this.props.history.push("/admin");
+        window.location.reload(true);
         return;
       })
       .catch(error => console.log(error))
@@ -48,6 +49,8 @@ class Login extends Component {
   render() {
     const {email, password} = this.state
     return (
+      <>
+      <Navbar />
       <div class="row">
         <form class="col s12" onSubmit={this.handleFormSubmit}>
 
@@ -76,6 +79,7 @@ class Login extends Component {
       <a href="#" onClick={this.signOut}>Sign out</a>
       
       </div>
+      </>
     );
   }
 }
