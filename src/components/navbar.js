@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import Logout from '../pages/Logout'
 
-import M from "materialize-css/dist/js/materialize.min.js";
-
-
 class navBar extends Component {
   
   state = {
@@ -14,17 +11,10 @@ class navBar extends Component {
 
   
   componentDidMount(){
-    this.navBarResponsiveInit();
     this.isLoged();
   }
+  
 
-  navBarResponsiveInit(){
-    // Iniciar Navbar responsive
-    document.addEventListener('DOMContentLoaded', function() {
-      var elems = document.querySelectorAll('.sidenav');
-      var instances = M.Sidenav.init(elems);
-    });
-  }
   
   isLoged = () => {
     localStorage.getItem('token')
@@ -75,17 +65,17 @@ class navBar extends Component {
     if(this.state.isLoged === false) {
       return(
         <>
-          <li><Link to={`/signup`} href="#sectionContact" class="sidenav-close"><i className="material-icons">face</i>Registrate!</Link></li>
-          <li><Link to={`/login`} href="#sectionContact" class="sidenav-close"><i className="material-icons">keyboard_tab</i>Iniciar Sesión!</Link></li>
+          <li><Link to={`/signup`} className="sidenav-close"><i className="material-icons">face</i>Registrate!</Link></li>
+          <li><Link to={`/login`}  className="sidenav-close"><i className="material-icons">keyboard_tab</i>Iniciar Sesión!</Link></li>
         </>
       )
     } else {
       return(
         <>
-          <li><Link to={`/admin/profile`} href="#sectionContact" class="sidenav-close"><i className="material-icons">person_pin</i>Perfil</Link></li>
-          <li><Link to={`/admin/comment/edit`} href="#sectionContact" class="sidenav-close"><i className="material-icons">person_pin</i>Mis Comentarios</Link></li>
-          <li><Link to={`/admin/comment`} href="#sectionContact" class="sidenav-close"><i className="material-icons">person_pin</i>Añadir Comentario</Link></li>
-          <li><a href="#sectionContact" class="sidenav-close"><i className="material-icons">close</i><Logout /></a></li>
+          <li><Link to={`/admin/profile`} className="sidenav-close"><i className="material-icons">person_pin</i>Perfil</Link></li>
+          <li><Link to={`/admin/comment/edit`} className="sidenav-close"><i className="material-icons">person_pin</i>Mis Comentarios</Link></li>
+          <li><Link to={`/admin/comment`} className="sidenav-close"><i className="material-icons">person_pin</i>Añadir Comentario</Link></li>
+          <li><a class="sidenav-close"><i className="material-icons">close</i><Logout /></a></li>
         </>
       )
     }
@@ -115,15 +105,15 @@ class navBar extends Component {
     <ul id="slide-out" className="sidenav">
       <li><div className="user-view">
         <div className="background">
-          <img src="images/foto1.jpg"/>
+          <img src="https://images.unsplash.com/photo-1546470427-227e2f27f02c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=975&q=80"/>
         </div>
         {this.isLogedSideNav()}
       </div></li>
-      <li><a href="/#home" class="sidenav-close"><i className="material-icons amber-text text-darken-4">home</i>Pagina Principal</a></li>
-      <li><a href="/#sectionMenu" class="sidenav-close"><i className="material-icons amber-text text-darken-4">restaurant_menu</i>Menu</a></li>
-      <li><a href="/#sectionOmeletes" class="sidenav-close"><i className="material-icons amber-text text-darken-4">room_service</i>Tortillas</a></li>
-      <li><a href="/#sectionComments" class="sidenav-close"><i className="material-icons amber-text text-darken-4">mode_comment</i>Ultimos Comentarios</a></li>
-      <li><a href="/#sectionContact" class="sidenav-close"><i className="material-icons amber-text text-darken-4">contact_mail</i>Contacto</a></li>
+      <li><a href="/#home" className="sidenav-close"><i className="material-icons amber-text text-darken-4">home</i>Pagina Principal</a></li>
+      <li><a href="/#sectionMenu" className="sidenav-close"><i className="material-icons amber-text text-darken-4">restaurant_menu</i>Menu</a></li>
+      <li><a href="/#sectionOmeletes" className="sidenav-close"><i className="material-icons amber-text text-darken-4">room_service</i>Tortillas</a></li>
+      <li><a href="/#sectionComments" className="sidenav-close"><i className="material-icons amber-text text-darken-4">mode_comment</i>Ultimos Comentarios</a></li>
+      <li><a href="/#sectionContact" className="sidenav-close"><i className="material-icons amber-text text-darken-4">contact_mail</i>Contacto</a></li>
       <li><a href="#!" class="sidenav-close"><i className="material-icons amber-text text-darken-4">location_on</i>Ubicacion</a></li>
       <li><div className="divider"></div></li>
       {this.isNotLogedSideNav()}

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import CommentService from '../lib/comment-service'
 import ListComments from '../components/listComments'
+import Navbar from '../components/navbar'
 
 class editCommentList extends Component {
 
@@ -43,7 +44,7 @@ class editCommentList extends Component {
 
       return userComments.map((comment, index) => 
               
-          <div key={index}>
+          <div className="commentContainer" key={index}>
               <ListComments 
                   key={comment._id}
                   comments={comment}
@@ -53,7 +54,8 @@ class editCommentList extends Component {
   }
   render() {
     return (
-      
+      <>
+      <Navbar />
       <div className="commentsContainer">
             <h3>TUS COMENTARIOS</h3>
             <p>*********</p>
@@ -61,6 +63,7 @@ class editCommentList extends Component {
             <div class="btnCommentsContainer">
             </div>
         </div>
+      </>
     );
   }
 }

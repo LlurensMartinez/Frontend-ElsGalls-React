@@ -6,21 +6,21 @@ const formComment = ({submit, title, comment, change}) => {
         <form class="col s12" onSubmit={submit}>
           <div class="row">
             <div class="input-field col s6">
-              <input type="text" class="validate" name="title" value={title} onChange={change}/>
-              <label  className="active" for="first_name">Titulo</label>
+              <input id="first_name"  type="text"  name="title"  class="validate" value={title} onChange={change}/>
+              <label  for="first_name">Titulo</label>
             </div>
           </div>
              
           <div class="row">
-            <div class="input-field col s6">
-              <textarea id="textarea1" class="materialize-textarea" name="comment" value={comment} onChange={change}></textarea>
-              <label  className="active" for="textarea1">Comentario</label>
+            <div class="input-field col s12">
+              <textarea id="textarea1" class="materialize-textarea validate" name="comment" value={comment} onChange={change}></textarea>
+              <label  for="textarea1">Comentario</label>
             </div>
           </div>
 
           <div class="row">
             <div class="input-field col s6">
-            <input type="submit" value="COMENTA!" />
+            <input class="waves-effect waves-light btn-large textWhite" type="submit" value="COMENTA!" />
             </div>
           </div>
           

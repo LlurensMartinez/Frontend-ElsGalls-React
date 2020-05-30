@@ -61,7 +61,7 @@ class Signup extends Component {
       <>
       <Navbar />
       <div class="row">
-        <form class="col s12" onSubmit={this.handleFormSubmit}>
+        <form class="col s12 login" onSubmit={this.handleFormSubmit}>
           <div class="row">
             <div class="input-field col s6">
               <input id="first_name" type="text" class="validate" name="firstname" value={firstname} onChange={this.handleChange}/>

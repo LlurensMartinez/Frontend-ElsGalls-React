@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import FormComment from '../components/formComment'
 import CommentService from '../lib/comment-service'
+import Navbar from '../components/navbar'
 
 class EditCommentId extends Component {
 
@@ -9,6 +10,25 @@ class EditCommentId extends Component {
     comment: "",
     token: localStorage.token,
   };
+
+  componentDidMount(){
+    this.getInfoComment();
+  }
+
+  getInfoComment = () => {
+
+    let id = this.props.match.params.id
+
+    CommentService.getComment(id)
+      .then((data) => {
+        this.setState({
+          title: data.comentario.title,
+          comment: data.comentario.comment
+        })
+        return;
+      })
+      .catch(error => console.log(error))
+  }
 
   handleChange = (event) => {
     const { name, value } = event.target;
@@ -35,7 +55,9 @@ class EditCommentId extends Component {
   render() {
     const {title, comment } = this.state
     return (
-      <div>
+      <>
+      <Navbar />
+      <div className="editCommentIdContainer">
         <FormComment 
           submit = {this.handleFormSubmit}
           comment = {comment}
@@ -43,6 +65,7 @@ class EditCommentId extends Component {
           change = {this.handleChange}
       />
       </div>
+      </>
     );
   }
 }

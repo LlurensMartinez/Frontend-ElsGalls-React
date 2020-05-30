@@ -33,13 +33,15 @@ class Comment extends Component {
     const {title, comment } = this.state
     return (
       <>
-        < Navbar />
-        <FormComment 
-            submit = {this.handleFormSubmit}
-            comment = {comment}
-            title = {title}
-            change = {this.handleChange}
-        />
+        <Navbar />
+        <div className="formCommentContiner">
+          <FormComment 
+              submit = {this.handleFormSubmit}
+              comment = {comment}
+              title = {title}
+              change = {this.handleChange}
+          />
+        </div>
       </>
     );
   }

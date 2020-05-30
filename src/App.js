@@ -13,7 +13,14 @@ import Profile from './pages/Profile';
 import EditProfile from './pages/EditProfile';
 import './App.css';
 
+import M from "materialize-css/dist/js/materialize.min.js";
+
 function App() {
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems);
+  });
 
   return (
     <Router>

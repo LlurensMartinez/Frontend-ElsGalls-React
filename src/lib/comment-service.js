@@ -21,6 +21,11 @@ class CommentService {
       .then(({ data }) => data);
   }
 
+  getComment(id) {
+    return this.comment.get(`/comentario/${id}`)
+      .then(({ data }) => data);
+  }
+
   putComment(commentUser) {
     const { id, title, comment, token } = commentUser;
     return this.comment.put(`/comentario/${id}/${token}`, {title, comment, token})

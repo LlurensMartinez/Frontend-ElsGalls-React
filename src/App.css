@@ -8,6 +8,14 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+input.textWhite{
+  color: white;
+  font-weight: 400;
+}
+textarea.materialize-textarea{
+  height: 200px;
+}
+
 .btn, .btn-large, .btn-small{
   background-color: #fd6934;
   border-radius: 30px;
@@ -409,7 +417,10 @@ transition: transform 1s;
   flex-direction: column;
   text-align: center;
   align-items: center;
+  width: 100%;
   margin-top: 2%;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  padding: 5%;
 }
 
 .commentContainer h2{
@@ -425,6 +436,14 @@ transition: transform 1s;
   color: black;
 }
 
+
+.formCommentContiner{
+  position: absolute;
+  margin-top:30%;
+  width: 100%;
+
+}
+
 /* SECTION COMMENTS */
 
 #sectionComments{
@@ -436,13 +455,14 @@ transition: transform 1s;
 }
 
 .commentsContainer{
+
+  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items:center;
   width: 100%;
-  height: 80vh;
-  margin-top:5%;
+  padding-top:10%;
 }
 
 .comment h2 {
@@ -495,6 +515,12 @@ transition: transform 1s;
     width: 83%;
   }
 
+}
+
+.editCommentIdContainer{
+  position: absolute;
+  margin-top: 30%;
+  width: 100%;
 }
 
 /* SECTION CONTACT */
@@ -572,13 +598,54 @@ transition: transform 1s;
 /* PROFILE */
 
 #profileImage {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   border-radius: 160px;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
+
+.profileContainer{
+  position:absolute;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top:25%;
+  width: 100%;
+  height: 100vh;
+  background-image: url(https://images.unsplash.com/photo-1490818387583-1baba5e638af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=60);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.profileContainer h2, h3{
+ font-size: 1.5rem;
+ color:#fd6934;
+}
+
+.profileContainer p{
+  font-size: 1.2rem;
+  font-weight: 500;
+ }
+
+ .profileContainer a{
+  margin-top:30px;
+  padding: 10px 30px 10px 30px;
+  border: 2px solid #fd6934;
+  border-radius: 20px;
+  color: #fd6934;
+  font-size: 1.2rem;
+ }
 
 /* FOOTER */
 
 .page-footer{
   background-color: #424248;
+}
+
+
+
+
+.login {
+    margin-top: 10%;
 }
