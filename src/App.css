@@ -381,15 +381,6 @@ background-image: url(https://images.unsplash.com/photo-1473093226795-af9932fe58
 
 }
 
-
-.card:hover{
-z-index: 1;
--webkit-transform: scale(1.2);
--ms-transform: scale(1.2);
-transform: scale(1.2);
-transition: transform 1s;
-}
-
 .omeleteImg{
   width: 300px;
   margin: 0 !important;
@@ -404,11 +395,6 @@ transition: transform 1s;
 .row .col.m7 {
   width: 100% !important;
 }
-
-.card-title{
- color: black !important;
-}
-
 
 /* COMMENTS */
 
