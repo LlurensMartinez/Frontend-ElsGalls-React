@@ -1,14 +1,22 @@
 import React, { Component } from 'react';
 
 import omeletes from '../data/omeletes.json';
+import M from 'materialize-css';
+import { Link } from 'react-router-dom';
 
 import Omeletes_carta from '../components/omeletes_carta'
 
 class Tortillas extends Component {
     render() {
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.fixed-action-btn');
+            M.FloatingActionButton.init(elems);
+        });
+
         const renderOmeletes = omeletes.map(omelete =>
             <Omeletes_carta omelete={omelete}/>
-            );
+        );
 
         return (
             <>
@@ -20,6 +28,12 @@ class Tortillas extends Component {
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div class="fixed-action-btn">
+                <Link to={'/carta'} class="btn-floating btn-large orange-darken-2">
+                    <i class="large material-icons">keyboard_backspace</i>
+                </Link>
             </div>
 
             <h2 class="center"><span><b>Tortillas</b></span></h2>
